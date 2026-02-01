@@ -1,7 +1,7 @@
 [project]
-name = "dsa"
+name = "structy"
 version = "0.0.0"
-description = "Data Structures and Algorithms"
+description = "Solutions to data structures and algorithms problems from structy"
 requires-python = ">=3.14,<3.15"
 
 [dependency-groups]
