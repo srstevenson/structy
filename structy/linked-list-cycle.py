@@ -14,7 +14,7 @@ def linked_list_cycle(head: Node | None) -> bool:
     fast = slow = head
     while fast and fast.next:
         fast = fast.next.next
-        slow = slow.next  # pyright: ignore[reportOptionalMemberAccess]
+        slow = slow.next  # ty: ignore[unresolved-attribute]
         if fast is slow:
             return True
     return False

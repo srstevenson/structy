@@ -18,7 +18,7 @@ def quickest_concat(s: str, words: list[str]) -> int:
                 s.startswith(word, idx)
                 and (count := _quickest_concat(idx + len(word))) > -1
             ):
-                min_count = min(min_count, count + 1)
+                min_count = min(min_count, count + 1)  # ty: ignore[possibly-unresolved-reference]
 
         return min_count if min_count < sys.maxsize else -1
 

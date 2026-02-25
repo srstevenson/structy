@@ -4,7 +4,7 @@ import unittest
 # time:  O(n)
 # space: O(n)
 # where: n = len(numbers)
-def pair_product(numbers: list[int], target_product: int) -> tuple[int, int]:  # pyright: ignore[reportReturnType]
+def pair_product(numbers: list[int], target_product: int) -> tuple[int, int]:  # ty: ignore[invalid-return-type]
     seen: dict[int, int] = {}
     for idx, number in enumerate(numbers):
         if (required := target_product // number) in seen:

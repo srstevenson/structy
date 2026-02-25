@@ -8,13 +8,13 @@ fmt:
 .PHONY: lint
 lint:
 	uv run ruff check --fix structy
-	uv run basedpyright structy
+	uv run ty check structy
 
 .PHONY: check
 check:
 	uv run ruff format --check structy
 	uv run ruff check structy
-	uv run basedpyright structy
+	uv run ty check structy
 
 .PHONY: test
 test:

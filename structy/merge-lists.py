@@ -10,7 +10,7 @@ class Node:
 # time:  O(min(n, m))
 # space: O(1)
 # where: n = number of nodes in head_1, m = number of nodes in head_2
-def merge_lists(head_1: Node, head_2: Node) -> Node:  # pyright: ignore[reportRedeclaration]
+def merge_lists(head_1: Node, head_2: Node) -> Node:
     if head_1.val < head_2.val:
         head = tail = head_1
         head_1: Node | None = head_1.next
@@ -21,10 +21,10 @@ def merge_lists(head_1: Node, head_2: Node) -> Node:  # pyright: ignore[reportRe
     while head_1 and head_2:
         if head_1.val < head_2.val:
             tail.next = head_1
-            head_1 = head_1.next
+            head_1 = head_1.next  # ty: ignore[conflicting-declarations]
         else:
             tail.next = head_2
-            head_2 = head_2.next
+            head_2 = head_2.next  # ty: ignore[conflicting-declarations]
         tail = tail.next
 
     if head_1:

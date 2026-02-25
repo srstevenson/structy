@@ -7,7 +7,7 @@ from collections import Counter
 # where: n = len(s)
 def most_frequent_char(s: str) -> str:
     counts = Counter(s)
-    return max(counts, key=counts.get)  # pyright: ignore[reportArgumentType,reportCallIssue,reportUnknownVariableType]
+    return max(counts, key=counts.get)  # ty: ignore[no-matching-overload]
 
 
 class TestSolution(unittest.TestCase):

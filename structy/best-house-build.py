@@ -31,9 +31,9 @@ def best_house_build(grid: list[list[int]]) -> int:
                 and (start_row, start_col) not in visited[(rowp, colp)]
                 and grid[rowp][colp] == 0
             ):
-                visited[(rowp, colp)].add((start_row, start_col))
-                queue.append((rowp, colp, start_row, start_col, distance + 1))
-                distances[(rowp, colp)] += distance + 1
+                visited[(rowp, colp)].add((start_row, start_col))  # ty: ignore[possibly-unresolved-reference]
+                queue.append((rowp, colp, start_row, start_col, distance + 1))  # ty: ignore[possibly-unresolved-reference]
+                distances[(rowp, colp)] += distance + 1  # ty: ignore[possibly-unresolved-reference]
 
     min_distance = sys.maxsize
     for cell in visited:

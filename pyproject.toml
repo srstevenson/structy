@@ -5,12 +5,7 @@ description = "Solutions to data structures and algorithms problems from structy
 requires-python = ">=3.14,<3.15"
 
 [dependency-groups]
-dev = ["basedpyright>=1.36.2", "pytest>=9.0.2", "ruff>=0.14.10"]
-
-[tool.basedpyright]
-pythonVersion = "3.14"
-typeCheckingMode = "recommended"
-reportUnusedCallResult = false
+dev = ["pytest>=9.0.2", "ruff>=0.14.10", "ty>=0.0.18"]
 
 [tool.ruff]
 target-version = "py314"
@@ -36,6 +31,9 @@ ignore = [
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
+
+[tool.ty.rules]
+all = "error"
 
 [tool.uv]
 package = false

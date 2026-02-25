@@ -18,10 +18,10 @@ def string_search(grid: list[list[str]], s: str) -> bool:
                 and (rowp, colp) not in seen
                 and grid[rowp][colp] == s[idx]
             ):
-                seen.add((rowp, colp))
-                if _dfs(rowp, colp, seen, idx + 1):
+                seen.add((rowp, colp))  # ty: ignore[possibly-unresolved-reference]
+                if _dfs(rowp, colp, seen, idx + 1):  # ty: ignore[possibly-unresolved-reference]
                     return True
-                seen.remove((rowp, colp))
+                seen.remove((rowp, colp))  # ty: ignore[possibly-unresolved-reference]
         return False
 
     for row in range(len(grid)):

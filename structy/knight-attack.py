@@ -30,8 +30,8 @@ def knight_attack(n: int, kr: int, kc: int, pr: int, pc: int) -> int | None:
                 and 0 <= (kcp := kc + dc) < n
                 and (krp, kcp) not in seen
             ):
-                seen.add((krp, kcp))
-                queue.append((krp, kcp, moves + 1))
+                seen.add((krp, kcp))  # ty: ignore[possibly-unresolved-reference]
+                queue.append((krp, kcp, moves + 1))  # ty: ignore[possibly-unresolved-reference]
 
 
 class TestSolution(unittest.TestCase):

@@ -10,7 +10,7 @@ class Node:
 # time:  O(n)
 # space: O(1)
 # where: n = number of nodes
-def is_univalue_list(head: Node) -> bool:  # pyright: ignore[reportRedeclaration]
+def is_univalue_list(head: Node) -> bool:
     val = head.val
     while head:
         if head.val != val:

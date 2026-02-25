@@ -5,7 +5,7 @@ from collections import deque
 # time:  O(nm)
 # space: O(nm)
 # where: n = len(grid), m = len(grid[0])
-def best_bridge(grid: list[list[str]]) -> int:  # pyright: ignore[reportReturnType]
+def best_bridge(grid: list[list[str]]) -> int:  # ty: ignore[invalid-return-type]
     for y in range(len(grid)):
         for x in range(len(grid[0])):
             if grid[y][x] != "L":
@@ -32,7 +32,7 @@ def _cells_in_island(grid: list[list[str]], y: int, x: int) -> set[tuple[int, in
     return visited
 
 
-def _steps_to_next_island(grid: list[list[str]], island: set[tuple[int, int]]) -> int:  # pyright: ignore[reportReturnType]
+def _steps_to_next_island(grid: list[list[str]], island: set[tuple[int, int]]) -> int:  # ty: ignore[invalid-return-type]
     queue = deque([(y, x, 0) for y, x in island])
     while queue:
         y, x, steps = queue.popleft()

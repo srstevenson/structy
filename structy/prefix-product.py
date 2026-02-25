@@ -6,7 +6,7 @@ import unittest
 # where: n = len(numbers)
 def prefix_product(numbers: list[int]) -> list[int]:
     product = 1
-    return [(product := product * num) for num in numbers]
+    return [(product := product * num) for num in numbers]  # ty: ignore[unresolved-reference]
 
 
 class TestSolution(unittest.TestCase):

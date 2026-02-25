@@ -14,8 +14,8 @@ def middle_value(head: Node) -> str:
     fast = slow = head
     while fast and fast.next:
         fast = fast.next.next
-        slow = slow.next  # pyright: ignore[reportOptionalMemberAccess]
-    return slow.val  # pyright: ignore[reportOptionalMemberAccess]
+        slow = slow.next  # ty: ignore[unresolved-attribute]
+    return slow.val  # ty: ignore[unresolved-attribute]
 
 
 class TestSolution(unittest.TestCase):

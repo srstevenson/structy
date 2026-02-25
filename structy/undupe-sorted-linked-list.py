@@ -17,8 +17,8 @@ def undupe_sorted_linked_list(head: Node) -> Node:
         if head.val != current.val:
             current.next = Node(head.val)
             current = current.next
-        head = head.next  # pyright: ignore[reportAssignmentType]
-    return unduped  # pyright: ignore[reportUnreachable]
+        head = head.next  # ty: ignore[invalid-assignment]
+    return unduped
 
 
 class TestSolution(unittest.TestCase):

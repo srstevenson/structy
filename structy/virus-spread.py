@@ -28,9 +28,9 @@ def virus_spread(grid: list[list[int]]) -> int:
                 and 0 <= (colp := col + dc) < len(grid[0])
                 and grid[rowp][colp] == 1
             ):
-                grid[rowp][colp] = 2
+                grid[rowp][colp] = 2  # ty: ignore[possibly-unresolved-reference]
                 num_clean -= 1
-                queue.append((rowp, colp, time + 1))
+                queue.append((rowp, colp, time + 1))  # ty: ignore[possibly-unresolved-reference]
 
     return time if num_clean == 0 else -1
 

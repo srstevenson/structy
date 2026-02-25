@@ -4,7 +4,7 @@ import unittest
 # time:  O(n)
 # space: O(n)
 # where: n = len(numbers)
-def pair_sum(numbers: list[int], target_sum: int) -> tuple[int, int]:  # pyright: ignore[reportReturnType]
+def pair_sum(numbers: list[int], target_sum: int) -> tuple[int, int]:  # ty: ignore[invalid-return-type]
     seen: dict[int, int] = {}
     for idx, number in enumerate(numbers):
         if (diff := target_sum - number) in seen:

@@ -22,7 +22,7 @@ class Queue[T]:
             self.head = Node(val)
             self.tail = self.head
         else:
-            assert self.tail  # For Pyright.
+            assert self.tail  # For ty.
             self.tail.next = Node(val)
             self.tail = self.tail.next
         self.size += 1

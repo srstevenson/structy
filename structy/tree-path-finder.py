@@ -19,11 +19,11 @@ def path_finder(root: Node | None, target: int | str) -> list[int | str] | None:
             if root.val == target:
                 return [root.val]
             if root.left and (path := _path_finder(root.left)):
-                path.append(root.val)
-                return path
+                path.append(root.val)  # ty: ignore[possibly-unresolved-reference]
+                return path  # ty: ignore[possibly-unresolved-reference]
             if root.right and (path := _path_finder(root.right)):
-                path.append(root.val)
-                return path
+                path.append(root.val)  # ty: ignore[possibly-unresolved-reference]
+                return path  # ty: ignore[possibly-unresolved-reference]
         return None
 
     result = _path_finder(root)
@@ -123,7 +123,7 @@ class TestSolution(unittest.TestCase):
             curr = curr.right
 
         result = path_finder(root, 16281)
-        assert result  # For Pyright.
+        assert result  # For ty.
         self.assertEqual(result[0], 0)
         self.assertEqual(result[-1], 16281)
         self.assertEqual(len(result), 16282)

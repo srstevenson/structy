@@ -49,13 +49,13 @@ class TestSolution(unittest.TestCase):
 
         a = flatten_tree(a)
         self.assertIsNone(a.left)
-        self.assertEqual(a.right.val, "b")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.val, "d")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.val, "e")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.val, "c")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.right.val, "f")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.right.val, "f")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertIsNone(a.right.right.right.right.right.right)  # pyright: ignore[reportOptionalMemberAccess]
+        self.assertEqual(a.right.val, "b")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.val, "d")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.val, "e")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.val, "c")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.right.val, "f")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.right.val, "f")  # ty: ignore[unresolved-attribute]
+        self.assertIsNone(a.right.right.right.right.right.right)  # ty: ignore[unresolved-attribute]
 
     def test_01(self) -> None:
         a = Node("a")
@@ -69,10 +69,10 @@ class TestSolution(unittest.TestCase):
 
         a = flatten_tree(a)
         self.assertIsNone(a.left)
-        self.assertEqual(a.right.val, "b")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.val, "e")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.val, "c")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertIsNone(a.right.right.right.right)  # pyright: ignore[reportOptionalMemberAccess]
+        self.assertEqual(a.right.val, "b")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.val, "e")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.val, "c")  # ty: ignore[unresolved-attribute]
+        self.assertIsNone(a.right.right.right.right)  # ty: ignore[unresolved-attribute]
 
     def test_02(self) -> None:
         a = Node("a")
@@ -92,13 +92,13 @@ class TestSolution(unittest.TestCase):
 
         a = flatten_tree(a)
         self.assertIsNone(a.left)
-        self.assertEqual(a.right.val, "b")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.val, "d")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.val, "e")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.val, "f")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.right.val, "g")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertEqual(a.right.right.right.right.right.right.val, "c")  # pyright: ignore[reportOptionalMemberAccess]
-        self.assertIsNone(a.right.right.right.right.right.right.right)  # pyright: ignore[reportOptionalMemberAccess]
+        self.assertEqual(a.right.val, "b")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.val, "d")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.val, "e")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.val, "f")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.right.val, "g")  # ty: ignore[unresolved-attribute]
+        self.assertEqual(a.right.right.right.right.right.right.val, "c")  # ty: ignore[unresolved-attribute]
+        self.assertIsNone(a.right.right.right.right.right.right.right)  # ty: ignore[unresolved-attribute]
 
 
 if __name__ == "__main__":

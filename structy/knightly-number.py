@@ -23,7 +23,7 @@ def knightly_number(n: int, m: int, kr: int, kc: int, pr: int, pc: int) -> int: 
             return 1 if kr == pr and kc == pc else 0
 
         return sum(
-            _knightly_number(m - 1, krp, kcp)
+            _knightly_number(m - 1, krp, kcp)  # ty: ignore[possibly-unresolved-reference]
             for dr, dc in DIRECTIONS
             if 0 <= (krp := kr + dr) < n and 0 <= (kcp := kc + dc) < n
         )
